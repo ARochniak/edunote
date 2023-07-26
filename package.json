@@ -21,9 +21,9 @@
   "description": "This is monorepo for the edunote app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/izzai/edunote.git"
+    "url": "git+https://github.com/arochniak/edunote.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/izzai/edunote#readme"
+  "homepage": "https://github.com/arochniak/edunote#readme"
 }
