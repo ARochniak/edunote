@@ -14,12 +14,12 @@ export default function LoginPage() {
   async function login(data: FormData) {
     'use server'
 
-    const email = data.get(LoginInputNames.email)
-    const password = data.get(LoginInputNames.password)
+    const email = data.get(LoginInputNames.email)?.toString()
+    const password = data.get(LoginInputNames.password)?.toString()
 
     const response = await fetch('http://localhost:4000/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ email: email?.toString(), password: password?.toString() }),
+      body: JSON.stringify({ email, password }),
       headers: {
         'Content-type': 'application/json',
       },
