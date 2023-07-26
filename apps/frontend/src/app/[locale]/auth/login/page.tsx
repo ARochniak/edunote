@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
-import { Button } from '~/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '~/components/ui/card'
-import { Input } from '~/components/ui/input'
+import { Button } from '~/components/molecules/button'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '~/components/molecules/card'
+import { Input } from '~/components/molecules/input'
 
 enum LoginInputNames {
   email = 'email',
