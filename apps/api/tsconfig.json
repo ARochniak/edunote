@@ -1,0 +1,11 @@
+{
+  "extends": "tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": false,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false
+  }
+}

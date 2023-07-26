@@ -1,0 +1,29 @@
+{
+  "name": "edunote",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "description": "This is monorepo for the edunote app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izzai/edunote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/izzai/edunote#readme"
+}

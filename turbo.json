@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "module": {},
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "storybook": {
+      "cache": false
+    },
+    "storybook:build": {
+      "outputs": ["storybook-static/**"]
+    }
+  },
+  "globalEnv": ["ANALYZE", "NODE_ENV"]
+}
