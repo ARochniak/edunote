@@ -6,6 +6,7 @@
     "module": "commonjs",
     "outDir": "./dist",
     "strictBindCallApply": false,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "declaration": true
   }
 }
