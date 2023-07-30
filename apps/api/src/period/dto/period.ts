@@ -1,15 +1,12 @@
 import { DayOfWeek } from '@prisma/client'
-import { IsEnum, IsOptional, IsDate, IsNumber } from 'class-validator'
-import { Transform } from 'class-transformer'
+import { IsEnum, IsOptional, IsNumber } from 'class-validator'
 
 export class PeriodDto {
-  @IsDate()
-  @Transform(({ value }) => new Date(value))
-  startTime: Date
+  @IsNumber()
+  startAt: number
 
-  @IsDate()
-  @Transform(({ value }) => new Date(value))
-  endTime: Date
+  @IsNumber()
+  endAt: number
 
   @IsOptional()
   @IsEnum(DayOfWeek)

@@ -2,5 +2,8 @@
   "Email": "Email",
   "Password": "Password",
   "Login": "Login",
-  "Login form": "Login form"
+  "Login form": "Login form",
+  "Start": "Start",
+  "End": "End",
+  "Add schedule": "Add schedule"
 }
