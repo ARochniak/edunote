@@ -10,13 +10,18 @@ export class PeriodService {
     return this.db.period.findMany({ where: { userId } })
   }
 
-  async createPeriod(userId: number, periodDto: PeriodDto) {
+  createPeriod(userId: number, periodDto: PeriodDto) {
     // TODO: Find better approach to eliminate unnecessary fields
     const { course, ...sanitizedPeriodDto } = periodDto
-    const period = await this.db.period.create({
+
+    return this.db.period.create({
       data: { ...sanitizedPeriodDto, userId },
     })
+  }
 
-    return period
+  deletePeriod(userId: number, id: number) {
+    return this.db.period.delete({
+      where: { userId, id },
+    })
   }
 }
