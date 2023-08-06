@@ -4,14 +4,12 @@ import { PeriodCard } from '~/components/organisms/periodCard'
 import { PeriodForm } from '~/components/organisms/periodForm'
 
 export default async function Home() {
-  const periods: Period[] = await fetch('http://localhost:4000/period', {
+  const periods: Period[] = await fetch(new URL('/period', process.env.BASE_API), {
     headers: {
       'Content-type': 'application/json',
       Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImlhdCI6MTY5MDcyNjgxMywiZXhwIjoxNjkxMzMxNjEzfQ.bDc8lHTbz7-j1689varzrZnD-NXgi_vHybcQJA8hjl0',
+        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImlhdCI6MTY5MTIzODk4OCwiZXhwIjoxNjkxODQzNzg4fQ.ARr7diFitWkXdCpDiR0RQOaISXDHkYcmQAoGkW5-Pes',
     },
-    // TODO: use revalidate strategy
-    cache: 'no-cache',
   }).then(res => res.json())
 
   return (

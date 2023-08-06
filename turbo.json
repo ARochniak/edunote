@@ -19,5 +19,5 @@
       "outputs": ["storybook-static/**"]
     }
   },
-  "globalEnv": ["ANALYZE", "NODE_ENV"]
+  "globalEnv": ["ANALYZE", "NODE_ENV", "BASE_API"]
 }
